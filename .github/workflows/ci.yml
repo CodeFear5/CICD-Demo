@@ -1,0 +1,17 @@
+name: Simple CI
+
+on:
+  push:
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CheckOut repo
+        uses: actions/checkout@v3
+
+      - name: List Files
+        run: ls -l
+
+      - name: show file content
+        run: cat hello.txt
